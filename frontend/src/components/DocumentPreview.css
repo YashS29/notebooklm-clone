@@ -1,0 +1,250 @@
+.document-preview-container {
+    display: flex;
+    height: 100%;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  /* Left side - PDF Preview */
+  .pdf-preview-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e5e7eb;
+    background: #f9fafb;
+  }
+  
+  .pdf-preview-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .document-icon {
+    padding: 6px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    color: #6b7280;
+  }
+  
+  .document-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .check-icon {
+    color: #10b981;
+  }
+  
+  .ready-message {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .pdf-canvas-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: auto;
+  }
+  
+  .pdf-preview-canvas {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  
+  /* Right side - Document Info */
+  .document-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  
+  .document-title {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .document-title h3 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+  }
+  
+  .page-count {
+    color: #6b7280;
+    font-size: 14px;
+  }
+  
+  .document-content {
+    flex: 1;
+    margin-bottom: 24px;
+  }
+  
+  .content-description {
+    color: #4b5563;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  .suggestions-list {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .suggestion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .suggestion-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .suggestion-bullet {
+    color: #6b7280;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+  
+  .suggestion-text {
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.4;
+    font-style: italic;
+  }
+  
+  .document-summary {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+  }
+  
+  .document-summary h4 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .skill-section {
+    margin-bottom: 16px;
+  }
+  
+  .skill-section strong {
+    display: block;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .skill-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .skill-tag.technical {
+    background: #dbeafe;
+    color: #1d4ed8;
+  }
+  
+  .skill-tag.soft {
+    background: #d1fae5;
+    color: #059669;
+  }
+  
+  .skill-tag.education {
+    background: #fef3c7;
+    color: #d97706;
+  }
+  
+  .summary-text {
+    margin-top: 16px;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 6px;
+    border-left: 3px solid #3b82f6;
+  }
+  
+  .summary-text p {
+    margin: 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .preview-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .continue-btn {
+    padding: 12px 24px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .continue-btn:hover {
+    background: #2563eb;
+  }
+  
+  .continue-btn:active {
+    background: #1d4ed8;
+    transform: translateY(1px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .document-preview-container {
+      flex-direction: column;
+    }
+    
+    .pdf-preview-section {
+      flex: none;
+      height: 300px;
+      border-right: none;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .document-info-section {
+      flex: 1;
+    }
+  }
